@@ -1,4 +1,4 @@
-package MathOperation;
+package mathOperation;
 
 public class MathOperationException extends Exception {
     public MathOperationException(){

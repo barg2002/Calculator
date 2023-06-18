@@ -1,4 +1,4 @@
-package MathOperation;
+package mathOperation;
 
 public class OperationFactory {
     public IMathOperation identifyOperations(String input){
