@@ -1,19 +1,19 @@
-import MathOperation.IMathOperation;
-import MathOperation.MathOperationException;
-import MathOperation.OperationFactory;
+import mathOperation.IMathOperation;
+import mathOperation.MathOperationException;
+import mathOperation.OperationFactory;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 
-public class SortingController {
+public class Distributor {
     private OperationFactory operationFactory;
 
-    public SortingController(){
+    public Distributor(){
         operationFactory = new OperationFactory();
     }
 
-    public List<Integer> sortNumbers(List<String> inputs){
+    public List<Integer> distributeNumbers(List<String> inputs){
         List<Integer> numbers = new ArrayList<Integer>();
         for (int i = 0; i<inputs.size(); i = i+2) {
             try {
@@ -28,7 +28,7 @@ public class SortingController {
         return numbers;
     }
 
-   public List<IMathOperation> sortMathOperation(List<String> inputs) throws MathOperationException {
+   public List<IMathOperation> distributeMathOperation(List<String> inputs) throws MathOperationException {
         List<IMathOperation> mathOperations = new ArrayList<IMathOperation>();
         for (int i = 0; i<inputs.size(); i = i + 2){
             IMathOperation operation = operationFactory.identifyOperations(inputs.get(i));
